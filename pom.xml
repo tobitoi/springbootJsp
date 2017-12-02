@@ -6,7 +6,7 @@
 	<groupId>com.attendance</groupId>
 	<artifactId>springboot-jsp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 
 	<name>springboot-jsp</name>
 	<description>Demo project for Spring Boot</description>
@@ -118,17 +118,6 @@
 			<version>5.5.12</version>
 		</dependency>
 
-		<dependency>
-			<groupId>org.glassfish.web</groupId>
-			<artifactId>el-impl</artifactId>
-			<version>2.2</version>
-		</dependency>
-
-		<dependency>
-			<groupId>javax.el</groupId>
-			<artifactId>javax.el-api</artifactId>
-			<version>2.2.4</version>
-		</dependency>
 
 	</dependencies>
 
