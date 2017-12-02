@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.3.final using JasperReports Library version 6.4.3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Cherry" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="13acf49e-4913-4d1b-bccc-113817ad15d1">
+    <style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false"/>
+    <style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false"/>
+    <style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true"/>
+    <style name="Detail" mode="Transparent" fontName="Times New Roman"/>
+    <style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+        <conditionalStyle>
+            <conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+            <style mode="Opaque" backcolor="#F0EFEF"/>
+        </conditionalStyle>
+    </style>
+    <field name="pegawai.userId" class="java.lang.Integer"/>
+    <field name="pegawai.name" class="java.lang.String"/>
+    <field name="checkInTime" class="java.lang.String"/>
+    <field name="checkOutTime" class="java.lang.String"/>
+    <field name="shift.name" class="java.lang.String"/>
+    <field name="late" class="java.lang.String"/>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="61" splitType="Stretch">
+            <rectangle>
+                <reportElement x="-21" y="-22" width="596" height="81" forecolor="rgba(194, 194, 194, 0.0)" backcolor="rgba(0, 255, 255, 0.25882354)" uuid="37b5e110-7a30-4039-9362-4e22c66c7c51"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="90" y="-10" width="485" height="59" forecolor="#636363" backcolor="rgba(224, 224, 224, 0.68235296)" uuid="584321a3-34d4-45b2-97a9-e66ea5a262a9"/>
+            </rectangle>
+            <staticText>
+                <reportElement key="" x="180" y="0" width="200" height="23" backcolor="#FFFFFF" uuid="af9f36b9-9384-434f-ac28-35400e10181f"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Arial Black" size="16" isBold="true" isItalic="true"/>
+                </textElement>
+                <text><![CDATA[Attendance Report]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="153" y="19" width="259" height="20" uuid="d12038ef-700b-49dd-a876-aff253ab6151"/>
+                <textElement textAlignment="Center">
+                    <font fontName="DIN Alternate" size="16" isBold="true" isItalic="true"/>
+                </textElement>
+                <text><![CDATA[Terminal Petikemas Makassar]]></text>
+            </staticText>
+            <ellipse>
+                <reportElement x="-14" y="-16" width="123" height="70" uuid="7a7e16bb-0284-4b47-a4db-b2d5a083a68a"/>
+            </ellipse>
+            <image>
+                <reportElement x="1" y="-6" width="98" height="59" uuid="322c3a57-5f66-4266-ae2d-84537e650a05"/>
+                <imageExpression><![CDATA["/Users/tobitoi/Downloads/logo.png"]]></imageExpression>
+            </image>
+        </band>
+    </title>
+    <pageHeader>
+        <band splitType="Stretch"/>
+    </pageHeader>
+    <columnHeader>
+        <band height="26" splitType="Stretch">
+            <staticText>
+                <reportElement style="Column header" x="-17" y="7" width="77" height="18" forecolor="#000000" uuid="b104ce6b-0d9a-4ce1-8439-d82d6e12d6d1">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a0f21643-af12-4bdd-9410-8f1bc50247cb"/>
+                </reportElement>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="false"/>
+                </textElement>
+                <text><![CDATA[User Id]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="Column header" x="61" y="7" width="109" height="18" forecolor="#000000" uuid="06222ad3-d18b-4fcb-99a9-fbc7641fdf28">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="82f79960-a4f5-44fd-9542-b3aac26411f9"/>
+                </reportElement>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="false"/>
+                </textElement>
+                <text><![CDATA[Nama]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="Column header" x="170" y="7" width="106" height="18" forecolor="#000000" uuid="9d19255a-260f-45ac-adcf-22790e3c8e8e">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d6521573-91c4-48b0-a36f-4158f8b7b23b"/>
+                </reportElement>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="false"/>
+                </textElement>
+                <text><![CDATA[Check In Time]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="Column header" x="276" y="7" width="114" height="18" forecolor="#000000" uuid="7a8b7064-ae3a-4048-a6e0-81a617e7ec0f">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0e18fe52-bd2c-4369-87c9-4e1318ec3d7d"/>
+                </reportElement>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="false"/>
+                </textElement>
+                <text><![CDATA[Check Out Time]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="Column header" x="391" y="7" width="72" height="18" forecolor="#000000" uuid="ce4a1758-b7f5-4675-9d93-20c430e95be2">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cab9ed04-327b-4421-9cde-8e361c946832"/>
+                </reportElement>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="false"/>
+                </textElement>
+                <text><![CDATA[Shift]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="Column header" x="465" y="7" width="79" height="18" forecolor="#000000" uuid="8cb5b193-e83f-49dc-893f-b622b102ad1b">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="284a886c-86db-4550-b911-07f7ee1b5c13"/>
+                </reportElement>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="false"/>
+                </textElement>
+                <text><![CDATA[Description]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="18" splitType="Stretch">
+            <frame>
+                <reportElement style="Row" mode="Opaque" x="0" y="0" width="555" height="18" uuid="b50221b5-8254-440b-8c6f-1f0b138c9259"/>
+                <textField isStretchWithOverflow="true">
+                    <reportElement style="Detail" positionType="Float" x="-16" y="0" width="76" height="18" uuid="b88fe242-c404-45b4-bc66-215143151e33">
+                        <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a0f21643-af12-4bdd-9410-8f1bc50247cb"/>
+                    </reportElement>
+                    <textElement textAlignment="Center" verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$F{pegawai.userId}]]></textFieldExpression>
+                </textField>
+                <textField isStretchWithOverflow="true">
+                    <reportElement style="Detail" positionType="Float" x="61" y="0" width="109" height="18" uuid="b5666650-5dc5-43a3-9408-076b27912aff">
+                        <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="82f79960-a4f5-44fd-9542-b3aac26411f9"/>
+                    </reportElement>
+                    <textElement textAlignment="Center" verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$F{pegawai.name}]]></textFieldExpression>
+                </textField>
+                <textField isStretchWithOverflow="true">
+                    <reportElement style="Detail" positionType="Float" x="170" y="0" width="106" height="18" uuid="e46c178e-119c-400a-a354-59527813cbd0">
+                        <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d6521573-91c4-48b0-a36f-4158f8b7b23b"/>
+                    </reportElement>
+                    <textElement textAlignment="Center" verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$F{checkInTime}]]></textFieldExpression>
+                </textField>
+                <textField isStretchWithOverflow="true">
+                    <reportElement style="Detail" positionType="Float" x="279" y="0" width="111" height="18" uuid="8a08b68a-f784-4c11-800d-8cf71bf7b2f4">
+                        <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0e18fe52-bd2c-4369-87c9-4e1318ec3d7d"/>
+                    </reportElement>
+                    <textElement textAlignment="Center" verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$F{checkOutTime}]]></textFieldExpression>
+                </textField>
+                <textField isStretchWithOverflow="true">
+                    <reportElement style="Detail" positionType="Float" x="391" y="0" width="72" height="18" uuid="638f27e7-30d5-4d71-ac25-a3ccdf5b81bb">
+                        <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cab9ed04-327b-4421-9cde-8e361c946832"/>
+                    </reportElement>
+                    <textElement textAlignment="Center" verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$F{shift.name}]]></textFieldExpression>
+                </textField>
+                <textField isStretchWithOverflow="true">
+                    <reportElement style="Detail" positionType="Float" x="465" y="0" width="79" height="18" uuid="4f94bfd8-8250-4c57-88a1-6bd89197b1b4">
+                        <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="284a886c-86db-4550-b911-07f7ee1b5c13"/>
+                    </reportElement>
+                    <textElement textAlignment="Center" verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$F{late}]]></textFieldExpression>
+                </textField>
+            </frame>
+        </band>
+    </detail>
+    <columnFooter>
+        <band height="7" splitType="Stretch">
+            <line>
+                <reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="1133a906-5b71-476e-9f3e-bc97c97058c1"/>
+                <graphicElement>
+                    <pen lineWidth="0.5" lineColor="#999999"/>
+                </graphicElement>
+            </line>
+        </band>
+    </columnFooter>
+    <pageFooter>
+        <band height="28" splitType="Stretch">
+            <rectangle>
+                <reportElement x="-20" y="-7" width="595" height="22" backcolor="rgba(0, 255, 255, 0.25882354)" uuid="511103ae-99a2-40fe-a727-9a5fd9c39053"/>
+            </rectangle>
+            <textField pattern="EEEEE dd MMMMM yyyy">
+                <reportElement x="-17" y="-6" width="197" height="20" forecolor="#050505" backcolor="#050505" uuid="ea30b381-dbcd-4252-bef5-4facf23e38d0"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="10" isBold="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="431" y="-4" width="70" height="17" uuid="1f6aab7f-ba3f-411f-8a5d-7107913f0243"/>
+                <textElement textAlignment="Right"/>
+                <textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+            </textField>
+            <textField evaluationTime="Report">
+                <reportElement x="499" y="-4" width="70" height="17" uuid="0fe73e6d-5b7d-40e0-b82c-63d6c9ec2618">
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                </reportElement>
+                <textElement textAlignment="Left"/>
+                <textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+            </textField>
+        </band>
+    </pageFooter>
+    <summary>
+        <band splitType="Stretch"/>
+    </summary>
+</jasperReport>
