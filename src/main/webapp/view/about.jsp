@@ -49,8 +49,8 @@
 		    		</div>
 		    		<div class="collapse navbar-collapse">
 		    			<ul class="nav navbar-nav">
-		    				<li class="active"><a href="${path}"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-		    				<li><a href="${path}/about"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
+		    				<li><a href="${path}"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+		    				<li class="active"><a href="${path}/about"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
 		    				<li><a href="javascript:void(0);"><span class="glyphicon glyphicon-phone-alt"></span> Contact</a></li>
 		    			</ul>
 		    			<ul class="nav navbar-nav navbar-right">
@@ -76,16 +76,24 @@
 		    	<div class="container-fluid">
 		    		<div class="inner-jsp panel-body" style="margin-left: 210px;">
 		    		    <div class="col-md-12">
-		    				<h2>${headingAttendance}</h2>
-		    				<p class="text-justify">${description}</p>
+		    		        <h2 class="text-center">${headingTpm}</h2>
+		    				<p class="text-center">${aboutsp1}</p>
+		    				<p class="text-center">${aboutsp2}</p>
+		    				<p class="text-center">${aboutsp3}</p>
+		    				<p class="text-center">${aboutsp4}</p>
 		    			</div>
 		    			<div class="col-md-12">
-                        	<h2>${headingAttendancePolicy}</h2>
-                        	<p class="text-justify">${descAttendancePolicy}</p>
+                        	<h2 class="text-center">${headingVisi}</h2>
+                        	<p class="text-center">${descVisi}</p>
                         </div>
                         <div class="col-md-12">
-                            <h2>${sample}</h2>
-                            <p class="text-justify">${descSampel}</p>
+                            <h2 class="text-center">${headingMisi}</h2>
+                            <p class="text-center">${descMisi1}</p>
+                            <p class="text-center">${descMisi2}</p>
+                            <p class="text-center">${descMisi3}</p>
+                            <p class="text-center">${descMisi4}</p>
+                            <p class="text-center">${descMisi5}</p>
+                            <p class="text-center">${descMisi6}</p>
                          </div>
 		    		</div>
 		    	</div>
